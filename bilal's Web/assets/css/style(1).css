@@ -1,0 +1,837 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif; /* Use a clean sans-serif font */
+}
+
+body {
+    background-color: #000; /* Black background like the image */
+    color: #fff;
+    overflow-x: hidden;
+}
+
+/* Header Styling */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 50px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+    opacity: 0.8;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    opacity: 1;
+}
+
+.badge {
+    background: #5e5ce6;
+    font-size: 10px;
+    padding: 2px 6px;
+    border-radius: 50%;
+    vertical-align: top;
+}
+
+.menu-icon {
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/* Hero Section Styling */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 50px 0 100px;
+    height: 80vh;
+    position: relative;
+}
+
+.hero-content h1 {
+    font-size: 80px;
+    font-weight: 500;
+    line-height: 1.1;
+}
+
+.hero-footer {
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.hero-footer p {
+    font-size: 14px;
+    color: #888;
+    line-height: 1.5;
+}
+
+.scroll-down .arrow {
+    font-size: 24px;
+    border: 1px solid #333;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+/* Image Container */
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.hero-image img {
+    max-width: 600px; /* Adjust based on your image size */
+    height: auto;
+    object-fit: contain;
+}
+
+/* Responsive for Mobile */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        padding: 50px 20px;
+        text-align: center;
+    }
+    .hero-content h1 {
+        font-size: 40px;
+    }
+    .hero-image img {
+        max-width: 100%;
+    }
+}
+
+/* Clients Section Styling */
+.clients-section {
+    padding: 60px 100px;
+    background-color: #000; /* Dark background */
+}
+
+.clients-text {
+    font-size: 16px;
+    color: #666; /* Gray text color */
+    margin-bottom: 40px;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: space-between; /* Logos ke darmiyan barabar space */
+    align-items: center;
+    flex-wrap: wrap; /* Mobile par line break karne ke liye */
+    gap: 40px;
+}
+
+.logo-container img {
+    height: 35px; /* Logos ka size set karne ke liye */
+    width: auto;
+    filter: brightness(1); /* Agar logos gray hain to brightness badha sakte hain */
+    opacity: 0.9;
+    transition: opacity 0.3s ease;
+}
+
+.logo-container img:hover {
+    opacity: 1;
+}
+
+/* Responsive Mobile view */
+@media (max-width: 768px) {
+    .clients-section {
+        padding: 40px 20px;
+        text-align: center;
+    }
+    
+    .logo-container {
+        justify-content: center;
+        gap: 30px;
+    }
+}
+
+.web3-studio {
+    position: relative;
+    background-color: #000;
+    padding: 100px 80px;
+    display: flex;
+    justify-content: center;
+    overflow: hidden; /* Glow bahar na nikalne ke liye */
+}
+
+/* Background Glow Effect */
+.glow-green {
+    position: absolute;
+    top: 10%;
+    right: -5%;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(46, 213, 115, 0.15) 0%, rgba(0, 0, 0, 0) 70%);
+    filter: blur(60px);
+    z-index: 1;
+}
+
+.studio-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    z-index: 2;
+}
+
+.studio-text {
+    flex: 1;
+    max-width: 450px;
+}
+
+.studio-text h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+    font-weight: 500;
+}
+
+.studio-text p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #999;
+}
+
+/* Infinity Section Styling */
+.infinity-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.infinity-wrapper {
+    position: relative;
+    width: 500px;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.infinity-svg {
+    width: 100%;
+    height: auto;
+}
+
+.text-left, .text-right {
+    position: absolute;
+    width: 150px;
+    text-align: center;
+    font-size: 16px;
+    color: #eee;
+    line-height: 1.4;
+}
+
+.text-left {
+    left: 40px;
+}
+
+.text-right {
+    right: 40px;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .studio-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .infinity-section {
+        margin-top: 50px;
+    }
+    .studio-text {
+        max-width: 100%;
+    }
+}
+
+.projects-section {
+    background-color: #000;
+    padding: 80px 100px;
+}
+
+.section-title {
+    font-size: 60px;
+    font-weight: 500;
+    margin-bottom: 50px;
+    color: #fff;
+}
+
+/* Grid setup */
+.projects-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr; /* Do columns */
+    grid-template-rows: auto auto auto; /* Rows setup */
+    gap: 20px;
+}
+
+.grid-item {
+    border-radius: 4px; /* Image layout mein sharp ya minor corners hain */
+    overflow: hidden;
+    display: flex;
+}
+
+.grid-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Images container mein sahi fit hon */
+}
+
+/* Positioning items according to design */
+.item-1 {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+
+.item-2 {
+    grid-column: 2 / 3;
+    grid-row: 1 / 3; /* Ye vertical bada image hai */
+}
+
+.item-3 {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+}
+
+.item-text {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+    background-color: #111; /* Dark gray background */
+    padding: 40px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.item-text h3 {
+    font-size: 24px;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.badge-coming {
+    background: #000;
+    color: #888;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    border: 1px solid #333;
+}
+
+.item-4 {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+}
+
+/* Responsive Mobile View */
+@media (max-width: 768px) {
+    .projects-grid {
+        grid-template-columns: 1fr; /* Mobile pe sab ek ke niche ek */
+    }
+    .projects-section {
+        padding: 40px 20px;
+    }
+    .item-2 {
+        grid-row: auto;
+    }
+}
+
+.other-projects {
+    background-color: #000;
+    padding: 100px 80px;
+    color: #fff;
+}
+
+.title {
+    font-size: 64px;
+    font-weight: 500;
+    margin-bottom: 60px;
+}
+
+/* Slider Layout */
+.projects-slider {
+    display: flex;
+    gap: 30px;
+    overflow-x: hidden; /* Desktop par clean look ke liye */
+}
+
+.project-card {
+    flex: 0 0 calc(33.33% - 20px); /* Ek line mein 3 cards */
+    min-width: 300px;
+}
+
+.card-img {
+    background-color: #2c2d33; /* Dark gray background for cards */
+    padding: 40px 20px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+}
+
+.card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Taake UI screens stretched na lagein */
+}
+
+/* Controls (Dots & Arrows) */
+.slider-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.indicators {
+    display: flex;
+    gap: 10px;
+}
+
+.dot {
+    width: 30px;
+    height: 2px;
+    background-color: #333;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+.dot.active {
+    background-color: #fff;
+}
+
+.arrows {
+    display: flex;
+    gap: 20px;
+}
+
+.arrow-btn {
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: 0.3s;
+}
+
+.arrow-btn:hover {
+    opacity: 1;
+}
+
+/* Mobile Responsive */
+@media (max-width: 992px) {
+    .project-card {
+        flex: 0 0 100%; /* Mobile par ek waqt mein ek card */
+    }
+    .projects-slider {
+        overflow-x: auto; /* Swipe karne ke liye */
+    }
+    .title {
+        font-size: 40px;
+    }
+}
+
+.help-grow-section {
+    background-color: #000;
+    color: #fff;
+    padding: 100px 80px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Abstract Top Design */
+.abstract-design {
+    width: 100%;
+    margin-bottom: 80px;
+    opacity: 0.6;
+}
+
+.abstract-design svg {
+    width: 100%;
+    height: auto;
+}
+
+/* Title Styling */
+.grow-title {
+    font-size: 80px;
+    line-height: 1;
+    font-weight: 500;
+    margin-bottom: 100px;
+}
+
+/* Flex Layout for Content */
+.grow-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 50px;
+}
+
+/* Left List */
+.grow-list ul {
+    list-style: none;
+}
+
+.grow-list li {
+    font-size: 24px;
+    margin-bottom: 25px;
+    color: #444; /* Unselected color */
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.grow-list li.active {
+    color: #fff;
+}
+
+/* Image in center */
+.grow-image {
+    flex: 1;
+    max-width: 400px;
+}
+
+.grow-image img {
+    width: 100%;
+    border-radius: 4px;
+    filter: brightness(0.8);
+}
+
+/* Right Description */
+.grow-description {
+    max-width: 350px;
+}
+
+.main-desc {
+    font-size: 18px;
+    line-height: 1.4;
+    margin-bottom: 30px;
+}
+
+.sub-list {
+    list-style: none;
+    color: #666;
+    font-size: 14px;
+    line-height: 2;
+}
+
+/* Side Glow Effect */
+.side-glow {
+    position: absolute;
+    left: -150px;
+    top: 40%;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(0, 255, 127, 0.15) 0%, rgba(0, 0, 0, 0) 70%);
+    filter: blur(50px);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .grow-content {
+        flex-direction: column;
+        gap: 40px;
+    }
+    .grow-title {
+        font-size: 50px;
+    }
+}
+
+.about-section {
+    background-color: #000;
+    color: #fff;
+    padding: 150px 80px;
+    position: relative;
+    overflow: hidden;
+    min-height: 800px; /* Space for absolute images */
+}
+
+/* Abstract Background Lines (Simplified) */
+.bg-shape {
+    position: absolute;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    z-index: 1;
+}
+
+.shape-top-right {
+    width: 300px;
+    height: 200px;
+    top: 50px;
+    right: 50px;
+    border-bottom: none;
+    border-left: none;
+}
+
+.shape-bottom-right {
+    width: 250px;
+    height: 250px;
+    bottom: 50px;
+    right: 100px;
+    border-radius: 0 0 100px 0; /* Curve effect */
+}
+
+/* Content Box */
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+.about-text {
+    max-width: 500px;
+    margin: 0 auto; /* Center text */
+    text-align: left;
+}
+
+.about-text h2 {
+    font-size: 80px;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+.about-text p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #999;
+    margin-bottom: 30px;
+}
+
+.more-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: 0.3s;
+}
+
+.more-link:hover {
+    gap: 20px;
+}
+
+/* Team Images Positioning */
+.team-member {
+    position: absolute;
+    width: 220px;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 4px;
+}
+
+.team-member img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.7);
+}
+
+.member-1 {
+    top: -50px;
+    left: 50px;
+}
+
+.member-2 {
+    bottom: -350px;
+    left: 30%;
+}
+
+.member-3 {
+    top: 200px;
+    right: 0px;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .about-section {
+        padding: 80px 20px;
+        min-height: auto;
+    }
+    .team-member {
+        position: static;
+        margin: 20px auto;
+        width: 100%;
+        max-width: 300px;
+    }
+    .about-text {
+        text-align: center;
+    }
+    .about-text h2 {
+        font-size: 50px;
+    }
+}
+
+.main-footer {
+    background-color: #000;
+    color: #fff;
+    padding: 100px 80px 40px 80px;
+    position: relative;
+    overflow: hidden; /* Glows ko andar rakhne ke liye */
+}
+
+/* Background Glow Bubbles */
+.footer-glows {
+    position: absolute;
+    bottom: -150px;
+    left: 0;
+    width: 100%;
+    height: 400px;
+    pointer-events: none;
+}
+
+.glow-item {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(100px);
+    opacity: 0.5;
+}
+
+.green {
+    width: 300px;
+    height: 300px;
+    background: #00ffaa;
+    left: -50px;
+    bottom: 0;
+}
+
+.blue {
+    width: 400px;
+    height: 400px;
+    background: #00aaff;
+    left: 25%;
+    bottom: -100px;
+}
+
+.purple {
+    width: 350px;
+    height: 350px;
+    background: #6e00ff;
+    right: -50px;
+    bottom: 0;
+}
+
+/* Footer Layout */
+.footer-container {
+    position: relative;
+    z-index: 2;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 100px;
+}
+
+.footer-brand h2 {
+    font-size: 42px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.footer-brand p {
+    color: #888;
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+
+.footer-email a {
+    font-size: 28px;
+    color: #fff;
+    text-decoration: none;
+    border-bottom: 1px solid #333;
+    padding-bottom: 5px;
+    transition: 0.3s;
+}
+
+.footer-email a:hover {
+    border-color: #fff;
+}
+
+.footer-nav {
+    display: flex;
+    gap: 100px;
+}
+
+.nav-col h4 {
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #555;
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+}
+
+.nav-col ul {
+    list-style: none;
+}
+
+.nav-col li {
+    margin-bottom: 12px;
+}
+
+.nav-col a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 15px;
+    opacity: 0.8;
+}
+
+.nav-col a:hover {
+    opacity: 1;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #222;
+    padding-top: 40px;
+    font-size: 13px;
+    color: #555;
+}
+
+.back-to-top {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.back-to-top .arrow {
+    font-size: 18px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 992px) {
+    .footer-top {
+        flex-direction: column;
+        gap: 60px;
+    }
+    .footer-nav {
+        gap: 50px;
+    }
+    .footer-brand h2 {
+        font-size: 32px;
+    }
+}
